@@ -14,7 +14,7 @@ const list = {
     }
 
    function  deleteTask(task){
-        delete task;
+        delete list[task];
     }
   function showList(){
     let toDo = "Todo: \n";
@@ -45,5 +45,4 @@ changeStatus("Read Book", "Done");
 
 deleteTask("create a new practice task");
 changeStatus("Sleep", "Done");
-
 showList();

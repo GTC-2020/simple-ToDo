@@ -14,7 +14,7 @@ const list = {
     }
 
    function  deleteTask(task){
-        delete list[task];
+        delete task;
     }
   function showList(){
     let toDo = "Todo: \n";

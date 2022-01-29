@@ -17,22 +17,19 @@ const list = {
         delete list[task];
     }
   function showList(){
-    let toDo = "Todo: \n";
-    let inProgress = "In Progress: \n";
-    let done = "Done: \n";
-
-    for(let key in list){
-        if(list[key] === "Todo"){
-            toDo += `\"${key}\" \n `;
-        } else if(list[key] === "In Progress"){
-            inProgress += `\"${key}\" \n `;
-        } else if(list[key] === "Done") {
-            done += `\"${key}\" \n `;
+    function sortTask(progres){
+        let outputString = ""
+        for(key in list){
+            if(list[key] === progres){
+                outputString  +=  `\n\"${key}\"`;
+            } 
         }
+        if(outputString == "") {
+        outputString = "\n-";
+        }
+        return outputString;
     }
-
-    
-console.log(toDo +inProgress + done);
+    console.log("\nToDo:" +sortTask("Todo")  + "\nIn Progress:" + sortTask("In Progress") + "\nDone:"  + sortTask("Done"));
 
 }
 

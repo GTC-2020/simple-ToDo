@@ -1,7 +1,14 @@
+const STATUS ={
+    IN_PROGRESS: "In Progress",
+    DONE: "Doone",
+    TO_DO:"To Do"
+}
+DEFAULT_STATUS = STATUS.TO_DO;
+
 const list = {
-    "create a new practice task": "In Progress",
-    "make a bed": "Done",
-    "write a post": "Todo",
+    "create a new practice task": STATUS.IN_PROGRESS,
+    "make a bed": STATUS.DONE,
+    "write a post": STATUS.TO_DO,
 }
 
     function changeStatus(task, progress){
@@ -10,7 +17,7 @@ const list = {
     }
 
   function  addTask(task){
-        list[task] = 'Todo';
+        list[task] = DEFAULT_STATUS;
     }
 
    function  deleteTask(task){
@@ -29,7 +36,7 @@ const list = {
         }
         return outputString;
     }
-    console.log("\nToDo:" +sortTask("Todo")  + "\nIn Progress:" + sortTask("In Progress") + "\nDone:"  + sortTask("Done"));
+    console.log("\nTo Do:" +sortTask("Todo")  + "\nIn Progress:" + sortTask("In Progress") + "\nDone:"  + sortTask("Done"));
 
 }
 

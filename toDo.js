@@ -36,7 +36,7 @@ const list = {
         }
         return outputString;
     }
-    console.log("\nTo Do:" +sortTask("Todo")  + "\nIn Progress:" + sortTask("In Progress") + "\nDone:"  + sortTask("Done"));
+    console.log("\nTo Do:" +sortTask(STATUS.TO_DO)  + "\nIn Progress:" + sortTask(STATUS.IN_PROGRESS) + "\nDone:"  + sortTask(STATUS.DONE));
 
 }
 
